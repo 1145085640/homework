@@ -1,0 +1,36 @@
+*{
+	padding:0;
+	margin: 0;
+	text-align: center;
+}
+header,footer{
+	height: 30px;
+	width: 100%;
+	background: #ccc;
+}
+section{
+	display: flex;
+}
+.left,.middle,.right{
+	height: 100px;
+}
+.left{
+	width: 200px;
+	background: red;
+}
+.right{
+	width: 200px;
+	background: blue;
+}
+.middle{
+	flex-grow: 1;
+	background: green;
+}
+@media(max-width: 768px){
+	section{
+	display: block;
+}
+.left,.middle,.right{
+	width: 100%;
+}
+}
