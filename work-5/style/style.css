@@ -1,0 +1,510 @@
+*{
+	padding:0;
+	margin: 0;
+	/*text-align: center;*/
+}
+h1{
+	text-align: center;
+	padding-top: 80px;
+}
+.icon{
+	margin-top: 100px;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+li{
+	width: 200px;
+	height: 200px;
+	/*margin-right: 30px;*/
+	margin-top: 32px;
+	margin-left: 32px;
+	border: 1px solid black;
+}
+/*放大镜图标*/
+.Magnifier{
+	position: relative;
+	
+}
+.Magnifier>div{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	top:50px;
+	left: 50px;
+	transform: rotate(45deg);
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.Magnifier div::after{
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 2px;
+	background: black;
+	left: 100%;
+	top: 50%;
+
+}
+/*鼠标图标*/
+.mouse{
+	position: relative;
+}
+.mouse div{
+	position: absolute;
+	width: 60px;
+	height: 110px;
+	left: 70px;
+	top: 45px;
+	border: 2px solid black;
+	border-radius: 28px;
+}
+.mouse div::after{
+	content: "";
+	position: absolute;
+	width: 60px;
+	height: 2px;
+	top: 30px;
+	background: black;
+}
+.mouse div::before{
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 30px;
+	left: 30px;
+	background: black;
+}
+/*心形图标*/
+.heart{
+	position: relative;
+}
+.heart div{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 75px;
+	top: 80px;
+	transform: rotate(225deg);
+	/*border: 2px solid black;*/
+	background: red;
+}
+.heart div::after{
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 25px;
+	/*top: -2px;*/
+	/*border: 2px solid red;*/
+	border-radius: 50%;
+	background: red;
+}
+.heart div::before{
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	/*left: -2px;*/
+	top: 25px;
+	/*border: 2px solid red;*/
+	border-radius: 50%;
+	background: red;
+}
+/*眼睛图标*/
+.eyes{
+	position: relative;
+}
+.eyes div{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left: 60px;
+	top: 60px;
+	border: 2px solid black;
+	border-radius: 70% 15%;
+	transform: rotate(45deg);
+}
+.eyes div::after{
+	content: "";
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 22px;
+	left: 24px;
+	background: black;
+	border-radius: 50%;
+}
+/*指南针图标*/
+.compass{
+	position: relative;
+}
+.compass div{
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 110px;
+	top: -25px;
+	border: solid;
+	border-width:90px 30px;
+	border-color: transparent transparent black;
+	transform: rotate(45deg);
+}
+.compass div::before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -89px;
+	left:-30px;
+	border: solid;
+	border-width:30px 30px;
+	border-color: transparent transparent #F0F0F0;
+}
+/*空心心形图标*/
+.heart-2{
+	position: relative;
+}
+.heart-2 div{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 75px;
+	top: 80px;
+	transform: rotate(225deg);
+	border: 2px solid black;
+	border-color: black transparent transparent black ; 
+}
+.heart-2 div::after{
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 40px;
+	left: 40px;
+	top: -2px;
+	border: 2px solid red;
+	border-radius: 0 30px 30px 0;
+	border-color: black black black transparent;
+}
+.heart-2 div::before{
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	left: -2px;
+	top: 40px;
+	border: 2px solid red;
+	border-radius:  0 0 30px 30px;
+	border-color:transparent black black black ;
+}
+/*循环图标*/
+.loop{
+	position: relative;
+}
+.loop div{
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 55px;
+	top: 55px;
+	border: 2px solid black;
+	border-radius: 50%;
+	border-color: black black black transparent;
+}
+.loop div::before{
+	content: "";
+	position: absolute;
+	width:20px;
+	height:20px;
+	bottom: -7px;
+	left:11px;
+	border: 2px solid black;
+	border-color: transparent transparent black black;
+	transform: rotate(80deg);
+}
+/*微笑图标*/
+.smile{
+	position: relative;
+}
+.smile div{
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 55px;
+	top: 55px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.smile div:nth-child(1)::before{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 25px;
+	left: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.smile div:nth-child(1):after{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 25px;
+	right: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.smile div:nth-child(2){
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 80px;
+	top: 85px;
+	border: 2px solid black;
+	border-radius: 50%;	
+	border-color: transparent transparent black transparent;
+}
+/*微笑2图标*/
+.smile-2{
+	position: relative;
+}
+.smile-2 div{
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 55px;
+	top: 55px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.smile-2 div:nth-child(1)::before{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 25px;
+	left: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.smile-2 div:nth-child(1):after{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 25px;
+	right: 20px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.smile-2 div:nth-child(2){
+	position: absolute;
+	width: 40px;
+	height: 20px;
+	left: 80px;
+	top: 110px;
+	border: 2px solid black;
+	border-radius: 0 0 40px 40px;	
+}
+/*逗号图标*/
+.six-six{
+	position: relative;
+}
+.six-six div{
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	left: 80px;
+	top: 65px;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.six-six div::before{
+	content: "";
+	position: absolute;
+	width:70px;
+	height:70px;
+	bottom: -18px;
+	left: -36px;
+	transform: rotate(45deg);
+	border-radius: 50%;
+	border: 2px solid black;
+	border-color: transparent black transparent transparent ;
+}
+/*雨滴图标*/
+.rain{
+	position: relative;
+}
+.rain div{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 75px;
+	top: 70px;
+	border: 2px solid black;
+	border-radius: 30px 30px 30px 0;
+	transform: rotate(135deg);
+}
+/*云图标*/
+.cloud{
+	position: relative;
+}
+.cloud div{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 55px;
+	top: 60px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: black;
+}
+.cloud div::before{
+	content: "";
+	position: absolute;
+	width:78px;
+	height:36px;
+	bottom: -2px;
+	left: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	background: black;
+}
+/*月亮图标*/
+.Moon{
+	position: relative;
+}
+.Moon div{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 70px;
+	top: 60px;
+	border: 2px solid black;
+	border-radius: 50%;
+	background: black;
+}
+.Moon div::before{
+	content: "";
+	position: absolute;
+	width:46px;
+	height:46px;
+	top: 10px;
+	left: 36px;
+	border-radius: 50%;
+	background: white;
+}
+/*救生圈图标*/
+.Life-buoy{
+	position: relative;
+}
+.Life-buoy div{
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 55px;
+	top: 55px;
+	border-radius: 50%;
+	background: black;	
+}
+.Life-buoy div:nth-child(1)::before{
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 2px;
+	top: 45px;
+	background: white;
+	transform: rotate(45deg);
+}
+.Life-buoy div:nth-child(1):after{
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 2px;
+	top: 45px;
+	background: white;
+	transform: rotate(135deg);
+}
+.Life-buoy div:nth-child(2){
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 80px;
+	top: 80px;
+	border-radius: 50%;
+	background: white;	
+}
+/*电池图标*/
+.Battery{
+	position: relative;
+}
+.Battery div{
+	position: absolute;
+	width: 110px;
+	height: 50px;
+	left: 40px;
+	top: 75px;
+	border-radius: 10px;
+	background: black;
+}
+.Battery div::before{
+	content: "";
+	position: absolute;
+	width: 104px;
+	height: 44px;
+	left:3px;
+	top:3px;
+	border-radius: 8px;
+	background: white;
+}
+.Battery div::after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 20px;
+	left:108px;
+	top:15px;
+	border-radius: 10px;
+	background: black;
+}
+/*行李箱图标*/
+.Trunk{
+	position: relative;
+}
+.Trunk div{
+	position: absolute;
+	width: 120px;
+	height: 80px;
+	left: 40px;
+	top: 65px;
+	border-radius: 10px;
+	background: black;
+}
+.Trunk div::before{
+	content: "";
+	position: absolute;
+	width: 110px;
+	height: 70px;
+	left:5px;
+	top:5px;
+	border-radius: 6px;
+	background: white;
+}
+.Trunk div::after{
+	content: "";
+	position: absolute;
+	width: 60px;
+	height: 80px;
+	left:30px;
+	background: black;
+}
+.Trunk>.last{
+	position: absolute;
+	width: 40px;
+	height: 20px;
+	top: 50px;
+	left: 75px;
+	border-radius: 20px;
+	border: 5px solid black;
+}
