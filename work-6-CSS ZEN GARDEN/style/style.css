@@ -1,0 +1,176 @@
+/*全局样式*/
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{ 
+	background:#daede2; padding:5%; }
+body { 
+	position: relative;
+	background:#77c4d3; 
+	z-index: -2;
+}
+a{
+	text-decoration:none;
+	margin:0 10px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	font-size: 24px;
+	color: #333;
+}
+a:hover{
+	border-bottom: 1px solid rgb(234,46,73);
+}
+p{
+	padding-top: 2%;
+	line-height: 40px;
+	font-size: 24px;
+}
+h3{
+	padding: 3% 0;
+	font-weight: normal;
+	font-size: 38px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/*section样式*/
+.intro{
+	width: 66.6%;
+	padding:5%;
+	background: rgb(119,196,211);
+	color: white;
+}
+.intro h1{
+	display: inline-block;
+	padding:2%;
+	background: rgb(234,46,73);
+	font-weight: normal;
+	font-size: 35px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.intro h2{
+	font-size: 120px;
+	font-weight: 800;
+	letter-spacing:-2px;
+}
+.summary{
+	padding: 10% 0;
+}
+.summary a{
+	color: white;
+}
+.summary p:first-child{
+	padding: 5% 0;
+	text-transform: uppercase;
+}
+.summary p:nth-child(2){
+	padding: 5% 0;
+	border-top: 1px solid red;
+	text-transform: uppercase;
+}
+.preamble{
+	background: rgba(255,255,255,0.9);
+	color: #333;
+	padding: 5% 5% 5% 30%;
+	font-size:20px;
+	margin-left: -30%
+
+}
+
+
+
+/*main supporting样式*/
+#zen-supporting{
+	padding: 5%;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+.explanation{
+	padding: 5%;
+	width: 50%;
+}
+
+.participation{
+	width: 50%;
+	padding: 5%;
+	background: rgb(234,46,73);
+}
+.participation a{
+	color: white;
+}
+.participation a:hover{
+	border-bottom: 1px solid white;
+}
+.benefits{
+	width: 30%;
+	height: 50%;
+	padding: 5%;
+	margin-top: 12%;
+	background: rgba(255,255,255,0.9);
+	color: #333;
+
+}
+.requirements{
+	width: 70%;
+	padding: 5%;
+	background: rgba(255,255,255,0.9);
+	color: #333;
+}
+.requirements p:nth-child(5){
+	padding-bottom: 5%;
+}
+
+.requirements p:nth-child(6){
+	padding-top: 5%;
+	border-top: 1px solid red;
+	text-transform: uppercase;
+}
+/*footer样式*/
+footer{
+	width: 45%;
+	padding-left: 60px;
+	line-height: 80px;
+	background: rgba(246,247,146,0.9);
+}
+footer a{
+	margin:0 10px;
+	font-size: 24px;
+	color: #333;
+}
+/*aside样式*/
+.sidebar{
+	position: absolute;
+	padding: 5%;
+    right: 0;
+    top: 2.5%;
+    width: 33%;
+    line-height: 50px;
+    background: rgba(246,247,146,0.9);
+    color: #333;
+    z-index: 2;
+}
+.sidebar a{
+     margin:0;
+     font-size: 22px;
+}
+.sidebar li{
+	list-style: none;
+	font-size: 22px;
+	color: rgb(147,157,117);
+}
+.sidebar .wrapper div{
+	padding: 5% 0;
+} 
+/*extra1样式*/
+.extra1{
+	position: fixed;
+	width: 30%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(51,55,69,0.9);
+	z-index: -1;
+}
