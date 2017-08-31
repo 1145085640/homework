@@ -5,31 +5,33 @@
 	font-family: "微软雅黑";
 	font-size: 12px;
 }
+body{
+	max-width: 600px;
+}
 /*header样式*/
 header{
 	display: flex;
 	align-items: center;
-	width: 100%;
-	height: 88px;
+	height: 0.88rem;
 	background: rgb(212,61,61);
 }
 .news{
-	padding-left: 50px;
+	padding-left: 0.5rem;
 }
 .news div{
 	position: relative;
-	width: 34px;
-	height: 28px;
+	width: 0.34rem;
+	height: 0.28rem;
 	border: 2px solid white;
 	border-radius: 5px;
 }
 .news div::before{
 	position: absolute;
 	content: "";
-	width: 18px;
-	height: 18px;
-	left: 6px;
-	top: -5px;
+	width: 0.18rem;
+	height: 0.18rem;
+	left: 0.05rem;
+	top: -0.06rem;
 	border:2px solid white;
 	border-radius: 5px;
 	border-color: transparent transparent white white;
@@ -39,44 +41,42 @@ header{
 .news div::after{
 	position: absolute;
 	content: "";
-	width: 18px;
-	height: 18px;
-	left: 26px;
+	width: 0.18rem;
+	height: 0.18rem;
+	left: 0.26rem;
 	top: -6px;
 	border-radius: 50%;
 	background: white;
 
 }
 .logo{
-	width: 196px;
-	height: 88px;
-	margin-left:180px;
+	width: 1.96rem;
+	height: 0.88rem;
+	margin-left:1.3rem;
 	background: url(../img/logo.png) no-repeat center;
 	background-size: 85%;
 }
 .refresh-btn{
 	display: block;
-	width: 30px;
-	height: 30px;
+	width: 0.3rem;
+	height: 0.3rem;
 	background: url(../img/2.png) no-repeat center;
 	background-size: 100%;
 }
 .serch{
-	width: 48px;
-	height: 48px;
-	margin-left: 166px;
+	width: 0.48rem;
+	height: 0.48rem;
+	margin-left: 1rem;
 	background: url(../img/1.png) no-repeat;
 	background-size: 100%;
 }
 /*nav样式*/
 nav{
 	display: flex;
-	width: 750px;
-	height: 72px;
-	line-height: 72px;
+	height: 0.72rem;
+	line-height: 0.72rem;
 }
 .nav-list{
-	width: 670px;
 	overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -85,74 +85,73 @@ nav{
 	background: rgb(244,245,246);
 }
 .nav-list a{
-	padding:0 25px;
+	padding:0 0.25rem;
 	text-decoration: none;
 	color: rgb(80,80,80);
-	font-size: 33px;
+	font-size: 0.33rem;
 }
 .nav-list .follow{
 	color: rgb(248,105,105);
 }
 .nav-add{
 	position: relative;
-    width: 80px;
-    height: 72px;
+    width: 0.8rem;
+    height: 0.72rem;
     background: rgb(244,245,246); 
 }
 .nav-add div{
 	position: absolute;
-	width: 36px;
-	height: 4px;
-	top: 34px;
-	right: 20px;
-	border-radius: 10px;
+	width: 0.36rem;
+	height: 0.04rem;
+	top: 0.34rem;
+	right: 0.15rem;
+	border-radius: 0.1rem;
     background: rgb(248,105,105);
 }
 .nav-add div:after{
 	content: "";
 	position: absolute;
-	width: 36px;
-	height: 4px;
+	width: 0.36rem;
+	height: 0.04rem;
 	transform: rotate(90deg);
-	border-radius: 10px;
+	border-radius: 0.1rem;
     background: rgb(248,105,105);
 }
 .nav-add .add-shadow{
 	position: absolute;
-	width: 14px;
-	height: 72px;
-	left: -12px;
+	width: 0.14rem;
+	height: 0.72rem;
+	left: -0.12rem;
 	background: url(../img/shadow.png) no-repeat center;
 	background-size: contain;
 }
 /*section样式*/
 section{
-	width: 690px;
-	margin: 0 auto;
+	padding: 0 0.12rem;
 }
 .content-list {
-	padding: 30px 0;
+	padding: 0.3rem 0;
 	border-bottom: 1px solid #D8D8D8;
 }
 .content-list h3{
 	font-weight: normal;
-	font-size: 34px;
+	font-size: 0.34rem;
 	color: rgb(34,34,34);
 	
 }
 .pic-list{
 	display: flex;
-	margin-top: 10px;
+	margin-top: 0.1rem;
 }
 .pic-list li{
-	width: 228px;
-	height: 146px;
+	width: 2.28rem;
+	height: 1.4rem;
 	list-style: none;
 
 }
 .pic-list .first-pic{
-	background: url(../img/wujing.jpg);
-	background-size: 100%;
+	background: url(../img/wujing.jpg) no-repeat;
+	background-size: 120%;
 }
 .pic-list .second-pic{
 	background: url(../img/wujing2.jpg) no-repeat;
@@ -169,11 +168,12 @@ section{
 	color: rgb(153,153,153);
 }
 .information-list .hot{
-	padding: 2px 4px;
+	padding: 0.02rem 0.04rem;
 	border: 1px solid red;
 	color: red;
 	font-size: 10px;
 }
 .hot,.classification,.comment{
-	margin-right: 5px;
+	margin-right: 0.05rem;
 }
+
