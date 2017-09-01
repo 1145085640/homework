@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>数组操作练习</title>
+    </style>
+</head>
+<body>
+    <script>
+
+       // 题1：查找数组对象中 age 大于 18 对象
+       function filterAdult(arr){
+          var newarr = arr.filter( function (each) {
+            return each.age > 18;
+          })
+          return newarr;
+       }
+       console.log(filterAdult([
+                 {age: 19, name:'Jack'},
+                 {age: 5, name:'Apple'},
+                 {age: 12, name:'Lynn'},
+                 {age: 25, name:'David'}
+                  ]));
+
+      // 题2：判断数组中是否所有的数字都大于 0
+      function isAllNumPosive(arr) {
+        var newarr = arr.filter(function(each) {
+          return !isNaN(each) ;
+        });
+        var bool = newarr.every( function (each) {
+            return each > 0;
+        })
+        return bool;
+      }
+
+      console.log(isAllNumPosive([1, 2, 3, 4]));
+      console.log(isAllNumPosive([1, 2, 3, 4, -1]));
+      console.log(isAllNumPosive([1, 2, 3, 4, 'a', {a:3}]));
+      
+
+
+      // 题3：改变传入的数组，将数组中第 n(从 0 开始算 ) 个元素放到数组的开头
+      function putFirst(arr,n) {
+        var newarr = arr.splice(n,1)[0];
+        arr.unshift(newarr);
+        return arr;
+      }
+      console.log(putFirst([1,2,3,4,5,6],3));
+
+      // 题 4: 将 arguments 对象转换成数组
+        function toArray(arg) {
+            var newarr = [].slice.call(arg);
+            return newarr;
+        }
+        console.log(Array.isArray(toArray("adhaohfa")));
+
+      // 题5：将数组中数字内容求和
+        function sum(arr) {
+          var num = 0;
+            for (var i = 0; i < arr.length; i++) {
+              if (!isNaN(arr[i])) {
+                 num+=arr[i];
+              }
+            }
+            return num;
+        }
+        console.log(sum(['a', 1, 2, {a:3}, 3, 4, 1.2]));
+
+
+
+      //  题 6: 按照 age 从小到大排序
+        function sortAge(arr){
+          var newarr = arr.sort(function(a, b){
+          return a.age - b.age > 0 ? 1 : -1;
+         });
+          return newarr;
+        }
+      
+       console.log(sortAge([
+                 {age: 19, name:'Jack'},
+                 {age: 5, name:'Apple'},
+                 {age: 12, name:'Lynn'},
+                 {age: 25, name:'David'}
+                  ]));
+        
+      //   题 7:将数组元素去重,其中数组元素均为基本类性
+        function uniq(arr) {
+          var newarr = [];
+          arr.forEach(function (each) { 
+            if (newarr.indexOf(each) === -1) {
+              newarr.push(each);
+            }
+          })
+          // 分割线——————上面用的是forEach，下面用的是for循环。两个在用法上有好坏之分么
+          for (var i = 0; i < arr.length; i++) {
+            if ( newarr.indexOf(arr[i]) === -1){
+              newarr.push(arr[i]);
+            }
+          }
+          return newarr;
+        }
+        console.log(uniq([1,2,'M','e','r', 'r', 'y']));
+
+      //   题 8: 将数组内容乱序
+        function random(arr) {
+           var newarr = arr.sort( function() {
+            return Math.random() > 0.5 ? 1 : -1;
+          })
+           return newarr;
+        }
+        console.log(random([1,2,3,4,5,6]));
+        
+
+    </script>
+</body>
+</html>
