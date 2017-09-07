@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 实现页面概要</title>
+    <script src="https://unpkg.com/jquery@3.2.1" type="text/javascript"></script>
+</head>
+  <body>
+    <div class="todo">
+      <h1 class="todo__title">待办事宜</h1>
+      <ul>
+        <li class="todo__item">看海贼王</li>
+        <li class="todo__item todo__item--special">学习前端</li>
+        <li class="todo__item">总结</li>
+      </ul>
+    </div>
+
+
+    <script type="text/javascript">
+      var todo = $("div *"),//获取div下面所有元素
+          a = $("ul>li"),
+          result = "",
+          text = "";
+      console.log(todo.length);
+      console.log($('div [class*="-"]').text());//获取div下面类名含有"-"的所有元素
+
+      //遍历ul的子元素li的文本内容
+      a.each(function() {
+        result += $(this).text() + ";";
+      })
+      console.log(result);
+
+      //遍历div下的每一个元素tagName，宽和高。
+      todo.each(function() {
+        text += "标签名:" + $(this)[0].tagName + "," + "宽:" + $(this).width() + ","+ "高：" + $(this).height() + ";";
+      })
+      console.log(text);
+
+    </script>
+  </body>
+</html>
