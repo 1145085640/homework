@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">	
+	<title>代办事宜</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<section>
+		<h1>todos</h1>
+		<input class="inp" type="text" placeholder="what need to be done?">
+		<div class="todo-list">
+			<ul class="list">
+			</ul>
+		</div>
+		<div class="operation">
+			<span class="name"></span>
+			<a class="all" href="##">all</a>
+			<a class="active" href="##">active</a>
+			<a class="completed" href="##">completed</a>
+			<a class="clear" href="##">clear completed</a>
+		</div>
+	</section>
+	<script src="https://unpkg.com/jquery@3.2.1"></script>
+	<script type="text/javascript">
+    var toDoList=[],
+        newArray=[];
+    $(function(){
+      var inp = $(".inp");
+      // 获取输入框的值
+      $(document).keydown(function(e){
+        if (e.keyCode == 13 && inp.val()!=="") {
+          var res = inp.val();
+          toDoList.push({"content":res,"state":"active"});
+          toDoList.length>0?$('.operation').show():null;
+          $('.inp').val(''); 
+          renderItem(toDoList);
+        }  
+      });
+      // 筛选数组
+      var filterArry = function(string){
+        string?newArray = toDoList.filter(function(item){
+         return item.state == string;
+        }):newArray = toDoList;
+        return newArray;
+      } 
+      // 遍历数组，实现ui
+      var renderItem = function(arr){
+        var content="";
+        $(arr).each(function(index,item){
+          if (item.state =='completed') {
+            var states = 'back';
+            var line = 'line';
+            var contents = item.content + "class='line'";
+            content+="<li><div class="+states+"></div><span class="+line+' '+"state="+item.state+">"+item.content+"</span><i index="+index+"></i></li>";
+          }else{
+            content+="<li><div class='choose' ></div><span state="+item.state+">"+item.content+"</span><i index="+index+"></i></li>";
+          }  
+        });
+        $('.list').html(content);
+        // 左下角显示未完成项目事件
+        $('.name').text(filterArry('active').length+"项未完成");
+        // 显示右下角清除按钮
+        filterArry('completed').length>0?$('.clear').show():$('.clear').hide();
+        // x号删除按钮事件
+        $('.list li>i').unbind('click').click(function() {
+         toDoList.splice($(this).attr('index'),1);
+         renderItem(toDoList);
+        });
+        // 选中完成状态事件
+        $('.list div').unbind('click').click(function() {
+          if($(this).next().attr('state')=="active"){
+            toDoList[$(this).siblings('i').attr('index')].state='completed';   
+          }else{
+            toDoList[$(this).siblings('i').attr('index')].state='active';
+          }
+          renderItem(toDoList);
+        });
+        // 筛选事件
+        $('.operation a:not(a:last)').unbind('click').click(function() {
+          if ($(this).attr('class')=='active') {
+            renderItem(filterArry('active'));
+          }
+          if($(this).attr('class')=='completed') {
+            renderItem(filterArry('completed'));
+          }
+          if($(this).attr('class')=='all') {
+            renderItem(toDoList);
+          }
+        });
+        // 清除所有已完成这个事件，运行起来好像有点问题，求指点
+        // $('.operation a:last').click(function(){
+        //   $(toDoList).each(function(index,item){
+        //     if(item.state=='completed') {
+        //       toDoList.splice(index,1);
+        //       }
+        //   });
+        //     renderItem(toDoList);
+        // });
+      };
+    });
+	</script>
+
+</body>
+</html>
